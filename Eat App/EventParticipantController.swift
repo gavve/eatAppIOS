@@ -12,6 +12,7 @@ class EventParticipantController: UITableViewController {
     
     var cellIdentifier = "participantCell"
     var event: Event!
+    var participants: [User]?
     
     @IBOutlet var mytableView: UITableView!
     
@@ -60,7 +61,8 @@ class EventParticipantController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ParticipantTableViewCell
         let user = self.event.userParticipants[indexPath.row]
-        
+        self.participants?.append(user) // lagger till i lokal array
+        cell.user = user
         cell.participantName.text = user.first_name as String
         cell.participantAge.text = String(user.getAge())
         return cell
@@ -69,6 +71,19 @@ class EventParticipantController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
         //TODO: ladda en ny view med specifika detaljer for den valda deltagaren
+        
+    }
+    
+    // Forbereder segues for bland ProfileVC
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if (segue.identifier == "showUserProfile") {
+            let profileVC = segue.destinationViewController as! ProfileVC
+            // hamtar cellens index
+            let index = tableView.indexPathForSelectedRow?.row
+            // skickar participant fran selected rowindex till ProfileVC
+            profileVC.user = self.participants![index!]
+        }
         
     }
 }

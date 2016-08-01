@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		D557174C1D2148B1008058C5 /* ProfilePicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557174B1D2148B1008058C5 /* ProfilePicVC.swift */; };
 		D55717571D216D47008058C5 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55717561D216D47008058C5 /* DraggableImageView.swift */; };
+		D55717591D2285AE008058C5 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55717581D2285AE008058C5 /* RegistrationVC.swift */; };
+		D557175B1D22CE89008058C5 /* RBResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557175A1D22CE89008058C5 /* RBResizer.swift */; };
+		D557175D1D232740008058C5 /* ScaleImageToSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557175C1D232740008058C5 /* ScaleImageToSize.swift */; };
+		D557175F1D241828008058C5 /* CustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557175E1D241828008058C5 /* CustomHeaderCell.swift */; };
+		D55717611D4FAABB008058C5 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55717601D4FAABB008058C5 /* ProfileVC.swift */; };
 		D5F913621D102E2300715AF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F913611D102E2300715AF0 /* LoginViewController.swift */; };
 		D5F913681D10544B00715AF0 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F913671D10544B00715AF0 /* AppManager.swift */; };
 		D5F9136C1D11773300715AF0 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F9136B1D11773300715AF0 /* EventTableViewCell.swift */; };
@@ -50,6 +55,11 @@
 /* Begin PBXFileReference section */
 		D557174B1D2148B1008058C5 /* ProfilePicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicVC.swift; sourceTree = "<group>"; };
 		D55717561D216D47008058C5 /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
+		D55717581D2285AE008058C5 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		D557175A1D22CE89008058C5 /* RBResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RBResizer.swift; path = "../../../../../../../Downloads/180e81cd961573e3c54d-aed9f11da8c7206abab6052b211e05533a29423b/RBResizer.swift"; sourceTree = "<group>"; };
+		D557175C1D232740008058C5 /* ScaleImageToSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleImageToSize.swift; sourceTree = "<group>"; };
+		D557175E1D241828008058C5 /* CustomHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderCell.swift; sourceTree = "<group>"; };
+		D55717601D4FAABB008058C5 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		D5F913611D102E2300715AF0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D5F913671D10544B00715AF0 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		D5F9136B1D11773300715AF0 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +135,7 @@
 			children = (
 				D5F9136B1D11773300715AF0 /* EventTableViewCell.swift */,
 				D5F913761D1A2CFB00715AF0 /* ParticipantTableViewCell.swift */,
+				D557175E1D241828008058C5 /* CustomHeaderCell.swift */,
 			);
 			name = CellViews;
 			sourceTree = "<group>";
@@ -132,6 +143,8 @@
 		D5F913781D1AB53100715AF0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D557175A1D22CE89008058C5 /* RBResizer.swift */,
+				D557175C1D232740008058C5 /* ScaleImageToSize.swift */,
 				D5F913791D1AB53D00715AF0 /* Extensions.swift */,
 			);
 			name = Extensions;
@@ -169,7 +182,9 @@
 				D5FA5AD01D01CDB300A3816B /* TableViewControllerEvents.swift */,
 				D5FA5AD21D01CDB300A3816B /* EventDetailVC.swift */,
 				D5F913611D102E2300715AF0 /* LoginViewController.swift */,
+				D55717581D2285AE008058C5 /* RegistrationVC.swift */,
 				D557174B1D2148B1008058C5 /* ProfilePicVC.swift */,
+				D55717601D4FAABB008058C5 /* ProfileVC.swift */,
 				D5FA5AD41D01CDB300A3816B /* Main.storyboard */,
 				D5FA5AD71D01CDB300A3816B /* Assets.xcassets */,
 				D5FA5AD91D01CDB300A3816B /* LaunchScreen.storyboard */,
@@ -338,12 +353,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D557175D1D232740008058C5 /* ScaleImageToSize.swift in Sources */,
 				D5FA5B041D0EE20800A3816B /* EventManager.swift in Sources */,
 				D5F9136C1D11773300715AF0 /* EventTableViewCell.swift in Sources */,
 				D5FA5AD31D01CDB300A3816B /* EventDetailVC.swift in Sources */,
 				D5FA5B061D0EE51D00A3816B /* JSONParser.swift in Sources */,
+				D557175F1D241828008058C5 /* CustomHeaderCell.swift in Sources */,
+				D55717591D2285AE008058C5 /* RegistrationVC.swift in Sources */,
 				D5FA5ACF1D01CDB300A3816B /* AppDelegate.swift in Sources */,
 				D5F913741D1A2BF900715AF0 /* EventParticipantController.swift in Sources */,
+				D55717611D4FAABB008058C5 /* ProfileVC.swift in Sources */,
 				D557174C1D2148B1008058C5 /* ProfilePicVC.swift in Sources */,
 				D5F913621D102E2300715AF0 /* LoginViewController.swift in Sources */,
 				D5FA5B001D01CFF100A3816B /* UserManager.swift in Sources */,
@@ -353,6 +372,7 @@
 				D5F913721D1A2B1200715AF0 /* EventDescriptionController.swift in Sources */,
 				D5FA5AD11D01CDB300A3816B /* TableViewControllerEvents.swift in Sources */,
 				D5F913771D1A2CFB00715AF0 /* ParticipantTableViewCell.swift in Sources */,
+				D557175B1D22CE89008058C5 /* RBResizer.swift in Sources */,
 				D5FE7B301D1C46E000F2B669 /* EventInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

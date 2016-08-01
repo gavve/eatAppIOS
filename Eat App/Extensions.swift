@@ -44,4 +44,15 @@ extension UIColor {
     convenience init(netHex:Int) {
         self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
     }
+    
+}
+
+extension NSMutableData {
+    
+    // lagger till string i nsdata
+    func appendString(value : String) {
+        value.withCString {
+            self.appendBytes($0, length: Int(strlen($0)) + 1)
+        }
+    }
 }

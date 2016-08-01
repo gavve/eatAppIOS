@@ -17,12 +17,14 @@ class ProfilePicVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     // MARK: Properties
     @IBOutlet weak var chooseImageButton: UIButton!
-    @IBOutlet weak var draggableImageView: DraggableImageView!
+    @IBOutlet weak var draggableImageView: UIImageView!
+    var image: UIImage?
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        self.draggableImageView.image = UIImage(named: "defaultProfilePic")
 
     }
     
@@ -46,5 +48,12 @@ class ProfilePicVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "savedProfilePicture" {
+            // Skickar tillbaka den valda profilbilden
+
+        }
     }
 }

@@ -14,5 +14,6 @@ class ParticipantTableViewCell: UITableViewCell {
 
     @IBOutlet weak var participantName: UILabel!
     @IBOutlet weak var participantAge: UILabel!
+    var user: User?
     
 }

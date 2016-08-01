@@ -54,7 +54,7 @@ class LoginViewController: UIViewController, CLLocationManagerDelegate {
         print("locations = \(locValue.latitude) \(locValue.longitude)")
         SessionUser.thisInstance.latitude = locValue.latitude
         SessionUser.thisInstance.longitude = locValue.longitude
-        // Sluta updatera for att spara batteri
+        // Sluta updatera for att spara batteri ??
     }
     
     // MARK : Async tasks for retrieving user information
